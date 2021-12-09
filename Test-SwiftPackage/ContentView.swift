@@ -7,6 +7,8 @@
 
 import SwiftUI
 import SwiftPackage
+import BlueViewFramework
+
 
 struct ContentView: View {
     var body: some View {
@@ -14,6 +16,9 @@ struct ContentView: View {
             Text(title())
             Image("Ball", bundle: .spmBundle)
             Image(uiImage: UIImage.scheduleImage()!)
+            
+            BlueView()
+                .frame(width: 100, height: 100)
         }
     }
     

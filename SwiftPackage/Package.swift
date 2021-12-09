@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SwiftPackage",
-            targets: ["SwiftPackage"]),
+            targets: ["SwiftPackage", "BlueViewFramework"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -26,6 +26,11 @@ let package = Package(
             dependencies: [],
             resources: [.process("Resource/Schedule.png"),
                         .process("Resource/Contents.json")]),
+        
+        .binaryTarget(
+            name: "BlueViewFramework",
+            path: "Sources/BlueViewFramework.xcframework"
+        ),
         
         .testTarget(
             name: "SwiftPackageTests",

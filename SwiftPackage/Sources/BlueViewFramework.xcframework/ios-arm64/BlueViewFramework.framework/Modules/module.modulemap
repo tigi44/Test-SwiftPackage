@@ -1,0 +1,11 @@
+framework module BlueViewFramework {
+  umbrella header "BlueViewFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module BlueViewFramework.Swift {
+    header "BlueViewFramework-Swift.h"
+    requires objc
+}
