@@ -11,6 +11,7 @@
 		0E3553482761F60C00B01C5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3553472761F60C00B01C5B /* ContentView.swift */; };
 		0E35534A2761F60D00B01C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E3553492761F60D00B01C5B /* Assets.xcassets */; };
 		0E35534D2761F60D00B01C5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E35534C2761F60D00B01C5B /* Preview Assets.xcassets */; };
+		0E3553562761FC0C00B01C5B /* SwiftPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 0E3553552761FC0C00B01C5B /* SwiftPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		0E3553472761F60C00B01C5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E3553492761F60D00B01C5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E35534C2761F60D00B01C5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0E3553532761F76B00B01C5B /* SwiftPackage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E3553562761FC0C00B01C5B /* SwiftPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +38,10 @@
 		0E3553392761F60C00B01C5B = {
 			isa = PBXGroup;
 			children = (
+				0E3553532761F76B00B01C5B /* SwiftPackage */,
 				0E3553442761F60C00B01C5B /* Test-SwiftPackage */,
 				0E3553432761F60C00B01C5B /* Products */,
+				0E3553542761FC0C00B01C5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +72,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		0E3553542761FC0C00B01C5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +95,9 @@
 			dependencies = (
 			);
 			name = "Test-SwiftPackage";
+			packageProductDependencies = (
+				0E3553552761FC0C00B01C5B /* SwiftPackage */,
+			);
 			productName = "Test-SwiftPackage";
 			productReference = 0E3553422761F60C00B01C5B /* Test-SwiftPackage.app */;
 			productType = "com.apple.product-type.application";
@@ -339,6 +354,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0E3553552761FC0C00B01C5B /* SwiftPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E35533A2761F60C00B01C5B /* Project object */;
 }

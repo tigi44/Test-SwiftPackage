@@ -6,11 +6,33 @@
 //
 
 import SwiftUI
+import SwiftPackage
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text(title())
+            Image("Ball", bundle: .spmBundle)
+            Image(uiImage: UIImage.scheduleImage()!)
+        }
+    }
+    
+    func title() -> String {
+        
+        guard let path = Bundle.spmBundle.path(forResource: "Contents", ofType: "json") else {
+            return ""
+        }
+        
+        do {
+            
+            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+            let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as! Dictionary<String, String>
+            
+            return jsonResult["title"] ?? ""
+        } catch {
+            
+            return ""
+        }
     }
 }
 
